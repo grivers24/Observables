@@ -1,0 +1,39 @@
+Http Client is used for Http requests and responses.
+service is available in the @angular/common/http package
+http service is included in the http client module which is used to initiate Http requests and responses in angular apps.
+HttpClientModule  need to be imported in th module usually in the app module.
+httpClient also gives the ability to use parameters, headers, interceptors, and other methods to control the request and responses.
+
+Benefits of HttpClient
+observables apis
+can have headers in the options object
+highly testable
+typed request methods
+resonse objects
+reqest and response interception
+
+CRUD
+
+1. HttpModule is used for communcating between frontend app and backend apis/rest endpoints
+
+2. HttpClientModule in out AppModule
+
+3. We need to inject httpClient iin components/services and creates its instance in constructor
+
+4. CRUD Operations
+  creates
+  edit
+  update
+  delete
+
+5. Http methods
+  post
+  get
+  put
+  delete
+
+6. Http for sending/configuring the headers that are sent.
+
+7.HttpClient helps in creating Interceptors for api request.
+
+8.HttpClient can be used for common error handling.
