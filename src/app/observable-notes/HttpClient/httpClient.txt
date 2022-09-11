@@ -11,7 +11,7 @@ highly testable
 typed request methods
 resonse objects
 reqest and response interception
-
+are inert
 CRUD
 
 1. HttpModule is used for communcating between frontend app and backend apis/rest endpoints
@@ -37,3 +37,16 @@ CRUD
 7.HttpClient helps in creating Interceptors for api request.
 
 8.HttpClient can be used for common error handling.
+
+How to create an Observable with the constructor
+An observable will start to emit its data as soon as an observer subscribes to it.
+
+The observable will invoke the next() callback when a value arrives in the stream, passing this value as the argument to the callback.
+
+If an error occurs, the error() callback is invoked. When the stream completes, the complete() callback is invoked.
+
+Note that all three of these callbacks are optional.
+
+Now that we know how it works, let’s create a simple observable as demonstration. We will use the main ‘app’ component.
+
+so you c1. RxJS comes bundled with Angular when we install it, but we still have to include it in the component where we want to use it.

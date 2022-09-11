@@ -13,3 +13,13 @@
       </div>
   </div>
 </div>
+<app-template-forms></app-template-forms>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <ul *ngFor="let employee of employees">
+        <li>{{ employee.id }}: {{ employee.name }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

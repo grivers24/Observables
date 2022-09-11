@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Employee } from './employee';
 import { Student } from './modules/student.model';
+import { EmployeeService } from './services/employee.service';
 import { StudentService } from './services/student.service';
 
 @Component({
@@ -10,8 +12,9 @@ import { StudentService } from './services/student.service';
 export class AppComponent {
 
   students: Student[]  =  [];
+  employees: Employee[] = [];
 
-  constructor(private studentService:  StudentService) {
+  constructor(private studentService:  StudentService, private empService: EmployeeService) {
     this.students = [];
   }
 
@@ -19,6 +22,12 @@ export class AppComponent {
     const studentsObservable = this.studentService.getStudent();
     studentsObservable.subscribe((studentsData: Student[]) => {
       this.students = studentsData;
-    }
-  )};
+    })
+
+    this.empService.getEmployee().subscribe(
+      data => {
+        this.employees = data;
+      }
+    );
+  }
 }
